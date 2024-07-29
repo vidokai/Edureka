@@ -1,8 +1,12 @@
-- name: install docker on the server 
+- name: Install Docker on the server
+  hosts: servers
+  become: yes
   tasks:
-  - name: install
-    package
-  - name: start docker
-    service 
+    - name: Install Docker
+      apt:
+        name: docker.io
+        state: present
+        update_cache: yes
+
 
 
