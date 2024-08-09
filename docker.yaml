@@ -1,6 +1,6 @@
 ---
 - name: Install Docker on the server
-  hosts: all
+  hosts: 10.1.10.21
   become: yes
   tasks:
     - name: Install required system packages
