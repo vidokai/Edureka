@@ -15,6 +15,8 @@ spec:
       containers:
       - name: abc-app
         image: dokai5/abc_tech:latest
+      imagePullSecrets:
+        - name: regcred
         ports:
         - containerPort: 8080
 ---
