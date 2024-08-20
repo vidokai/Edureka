@@ -12,13 +12,13 @@ spec:
       labels:
         app: abc_deploy
     spec:
+      imagePullSecrets:             
+      - name: regcred
       containers:
       - name: abc-app
         image: dokai5/abc_tech:latest
         ports:
         - containerPort: 8080
-        imagePullSecrets:
-          - name: regcred
 ---
 apiVersion: v1
 kind: Service
