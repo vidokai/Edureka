@@ -12,8 +12,7 @@ spec:
       labels:
         app: abc_deploy
     spec:
-      imagePullSecrets:             
-      - name: regcred
+      serviceAccountName: my-custom-sa  
       containers:
       - name: abc-app
         image: dokai5/abc_tech:latest
